@@ -29,7 +29,7 @@ const Main = () => {
 				</Paragraph>
 
 				<Link href='/doc/resume.pdf' target='blank'>
-					<Button colorScheme='blue'>Download my Resume</Button>
+					<Button colorScheme='blue'>Download My Resume</Button>
 				</Link>
 			</Section>
 			<Section heading='Skills' id='about-me'></Section>
