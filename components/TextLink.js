@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 const TextLink = ({ icon, link, text, color, newPage = true }) => {

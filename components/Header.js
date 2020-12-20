@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 
 const Header = () => {
 	return (
@@ -8,6 +8,8 @@ const Header = () => {
 			minH='400px'
 			alignItems='center'
 			justifyContent='center'
+			wrap='wrap'
+			mb={10}
 		>
 			<Box
 				mr='3'

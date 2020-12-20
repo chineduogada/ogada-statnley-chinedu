@@ -5,7 +5,7 @@ import TextLink from "./TextLink";
 
 const Main = () => {
 	return (
-		<Box as='main' maxW='650px' m='0 auto'>
+		<Box as='main' maxW='650px' m='0 auto' p={3}>
 			<Section heading='About Me' id='about-me'>
 				<Paragraph>
 					I’m currently working as a freelance fullstack developer and
