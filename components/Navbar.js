@@ -15,10 +15,13 @@ const Navbar = () => {
 
 	const listItemProps = {
 		h: "40px",
-		bg: "gray.100",
 		as: "a",
 		d: "grid",
 		placeItems: "center",
+		transition: ".5s",
+		_hover: {
+			bg: "gray.100",
+		},
 		onClick: onClose,
 	};
 
@@ -32,6 +35,7 @@ const Navbar = () => {
 			position='sticky'
 			top='0'
 			bg='white'
+			zIndex='1'
 		>
 			<Button colorScheme='blue' onClick={onOpen}>
 				<FaBars />
@@ -50,7 +54,7 @@ const Navbar = () => {
 								<Text align='center'>Blogs</Text>
 							</Box>
 							<Box href='#project' {...listItemProps}>
-								<Text align='center'>Project</Text>
+								<Text align='center'>Projects</Text>
 							</Box>
 						</VStack>
 					</DrawerContent>

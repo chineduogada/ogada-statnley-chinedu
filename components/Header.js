@@ -28,12 +28,12 @@ const Header = () => {
 			<Heading className='heading' as='h1' size='2xl'>
 				Hi there,
 				<br />i am{" "}
-				<Box className='heading__bold' as='span'>
+				<Box className='heading__bold' as='span' color='brand.700'>
 					Stanley C. Ogada
 				</Box>
 				,
 				<br />a{" "}
-				<Box className='heading__bold' as='span'>
+				<Box className='heading__bold' as='span' color='brand.700'>
 					Fullstack Develop
 				</Box>
 			</Heading>
