@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import Paragraph from "./Paragraph";
 import Section from "./Section";
 import TextLink from "./TextLink";
@@ -26,6 +26,8 @@ const Main = () => {
 					eligendi architecto odio placeat sequi rerum possimus at ducimus
 					aperiam temporibus?
 				</Paragraph>
+
+				<Button colorScheme='blue'>Download my Resume</Button>
 			</Section>
 			<Section heading='Skills' id='about-me'></Section>
 			<Section heading='Blogs' id='about-me'></Section>
