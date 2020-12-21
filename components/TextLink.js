@@ -1,32 +1,17 @@
-import { Text } from "@chakra-ui/react";
-import Image from "next/image";
+import ButtonLink from "./ButtonLink";
 
-const TextLink = ({ icon, link, text, color, newPage = true }) => {
+const TextLink = (props) => {
 	return (
-		<Text
-			as='a'
-			href={link}
-			p={2}
-			shadow='md'
-			borderRadius='5px'
-			color={color || "brand.700"}
-			transition='.2s'
+		<ButtonLink
+			{...props}
+			variant='outline'
+			size={props.size || "xs"}
+			fontWeight={props.fontWeight || "bold"}
 			_hover={{
-				shadow: "none",
-				textDecor: "underline",
+				borderColor: "transparent",
+				textDecoration: "underline",
 			}}
-			target={newPage && "blank"}
-		>
-			{icon ? (
-				<>
-					<Image width='20px' height='20px' src={icon} alt={text} />
-
-					<span style={{ marginLeft: "5px" }}>{text}</span>
-				</>
-			) : (
-				text
-			)}
-		</Text>
+		/>
 	);
 };
 
