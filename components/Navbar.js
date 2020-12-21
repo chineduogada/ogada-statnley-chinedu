@@ -44,18 +44,18 @@ const Navbar = () => {
 				<DrawerOverlay>
 					<DrawerContent d='flex' flexDir='column' justifyContent='center'>
 						<VStack spacing={4} align='stretch'>
-							<Box href='#about-me' {...listItemProps}>
+							<Text href='#about-me' {...listItemProps}>
 								<Text align='center'>About me</Text>
-							</Box>
+							</Text>
 							<Box href='#projects' {...listItemProps}>
 								<Text align='center'>Projects</Text>
-							</Box>
-							<Box href='#blogs' {...listItemProps}>
+							</Text>
+							<Text href='#blogs' {...listItemProps}>
 								<Text align='center'>Blogs</Text>
-							</Box>
-							<Box href='#skills' {...listItemProps}>
+							</Text>
+							<Text href='#skills' {...listItemProps}>
 								<Text align='center'>Skills</Text>
-							</Box>
+							</Text>
 						</VStack>
 					</DrawerContent>
 				</DrawerOverlay>
