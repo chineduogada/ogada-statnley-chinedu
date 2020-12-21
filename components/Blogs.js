@@ -1,8 +1,9 @@
 import { Box, Heading } from "@chakra-ui/react";
+import { FaBookOpen } from "react-icons/fa";
+import truncate from "../utils/truncate";
 import Paragraph from "./Paragraph";
 import Section from "./Section";
-import Link from "./Link";
-import truncate from "../utils/truncate";
+import ButtonLink from "./ButtonLink";
 
 const blogs = [
 	{
@@ -19,12 +20,23 @@ const Blogs = () => {
 		<Section heading='Blogs' id='blogs'>
 			<Box>
 				{blogs.map((blog) => (
-					<Box p={1} mb={3} shadow='xs'>
-						<Heading as='h4' className='section__heading' fontSize='lg'>
-							<Link href='/'>{truncate(blog.title, 35)}</Link>
-						</Heading>
+					<Box as='article' p={2} mb={3} shadow='xs' rounded='md'>
+						<header>
+							<Heading
+								as='h4'
+								className='section__heading'
+								fontSize='lg'
+							>
+								{truncate(blog.title, 35)}
+							</Heading>
+							<Paragraph>{blog.date}</Paragraph>
+						</header>
 
-						<Paragraph>{blog.date}</Paragraph>
+						<Box as='footer' textAlign='right'>
+							<ButtonLink href='/' variant='ghost' icon={<FaBookOpen />}>
+								read
+							</ButtonLink>
+						</Box>
 					</Box>
 				))}
 			</Box>
