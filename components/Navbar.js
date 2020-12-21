@@ -8,7 +8,7 @@ import {
 	VStack,
 	Text,
 } from "@chakra-ui/react";
-import { FaBars } from "react-icons/fa";
+import { CgMenuLeft } from "react-icons/cg";
 
 const Navbar = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -19,6 +19,7 @@ const Navbar = () => {
 		d: "grid",
 		placeItems: "center",
 		transition: ".5s",
+		borderBottom: "3px solid transparent",
 		_hover: {
 			bg: "gray.100",
 		},
@@ -31,15 +32,21 @@ const Navbar = () => {
 			p='2'
 			opacity='.5'
 			transition='.5s'
-			_hover={{ opacity: "1" }}
+			_hover={{ opacity: "1", shadow: "md" }}
 			position='sticky'
 			top='0'
 			bg='white'
 			zIndex='1'
 		>
-			<Button colorScheme='blue' onClick={onOpen}>
-				<FaBars />
+			<Button
+				fontWeight='900'
+				rounded='full'
+				colorScheme='blue'
+				onClick={onOpen}
+			>
+				<CgMenuLeft />
 			</Button>
+
 			<Drawer placement='left' onClose={onClose} isOpen={isOpen}>
 				<DrawerOverlay>
 					<DrawerContent d='flex' flexDir='column' justifyContent='center'>
@@ -53,7 +60,7 @@ const Navbar = () => {
 							<Box href='#blogs' {...listItemProps}>
 								<Text align='center'>Blogs</Text>
 							</Box>
-							<Box href='#project' {...listItemProps}>
+							<Box href='#projects' {...listItemProps}>
 								<Text align='center'>Projects</Text>
 							</Box>
 						</VStack>
