@@ -9,7 +9,7 @@ const Section = ({ heading, id, children, ...rest }) => {
 					size='lg'
 					className='section__heading'
 					color='brand.900'
-					mb={4}
+					mt={4}
 				>
 					{heading}
 				</Heading>

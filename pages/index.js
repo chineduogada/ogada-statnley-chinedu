@@ -13,7 +13,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Box maxW='650px' m='0 auto' p={3} className='container'>
+			<Box maxW='768px' mx='auto' p={2}>
 				<Navbar />
 				<Header />
 				<Main />

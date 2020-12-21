@@ -47,14 +47,14 @@ const Navbar = () => {
 							<Box href='#about-me' {...listItemProps}>
 								<Text align='center'>About me</Text>
 							</Box>
-							<Box href='#skills' {...listItemProps}>
-								<Text align='center'>Skills</Text>
+							<Box href='#projects' {...listItemProps}>
+								<Text align='center'>Projects</Text>
 							</Box>
 							<Box href='#blogs' {...listItemProps}>
 								<Text align='center'>Blogs</Text>
 							</Box>
-							<Box href='#project' {...listItemProps}>
-								<Text align='center'>Projects</Text>
+							<Box href='#skills' {...listItemProps}>
+								<Text align='center'>Skills</Text>
 							</Box>
 						</VStack>
 					</DrawerContent>

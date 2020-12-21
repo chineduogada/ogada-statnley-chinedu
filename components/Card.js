@@ -6,13 +6,12 @@ import { AiFillGithub } from "react-icons/ai";
 import { TiChevronRight } from "react-icons/ti";
 
 import truncate from "../utils/truncate";
+import ButtonLink from "./ButtonLink";
 
 const renderIcon = (link, icon) => (
 	<Link href={link}>
 		<a target='blank'>
-			<Text mr={2} color='blue.500' _hover={{ color: "black" }}>
-				{icon}
-			</Text>
+			<Text mr={2}>{icon}</Text>
 		</a>
 	</Link>
 );
@@ -29,6 +28,7 @@ const Card = ({ github, vercel, npm, heading, description }) => {
 			direction='column'
 			justifyContent='space-between'
 			as='article'
+			textAlign='left'
 		>
 			<Box as='header'>
 				<Heading as='h4' className='section__heading' fontSize='lg' mb={3}>
@@ -46,13 +46,15 @@ const Card = ({ github, vercel, npm, heading, description }) => {
 					{npm && renderIcon(npm, <IoLogoNpm />)}
 				</Flex>
 
-				<Link href={github}>
-					<a target='blank'>
-						<Text d='flex' alignItems='center' color='blue.500'>
-							View Details <TiChevronRight />
-						</Text>
-					</a>
-				</Link>
+				<ButtonLink
+					href={github}
+					icon={<TiChevronRight />}
+					newPage
+					size='sm'
+					variant='ghost'
+				>
+					View Details
+				</ButtonLink>
 			</Flex>
 		</Flex>
 	);

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Paragraph from "./Paragraph";
 import Section from "./Section";
 import TextLink from "./TextLink";
+import { SiNodeDotJs, SiReact } from "react-icons/si";
 
 const AboutMe = () => {
 	return (
@@ -11,13 +12,17 @@ const AboutMe = () => {
 				I’m currently working as a freelance fullstack developer and UI/UX
 				designer. I enjoy building web apps using{" "}
 				<TextLink
-					link='https://nodejs.org/'
-					text='Node.js'
-					color='teal.400'
-					icon='/img/me.jpg'
-				/>{" "}
-				and <TextLink link='https://reactjs.org/' text='React.js' />. I'm
-				also an active student in University of AMIKOM Yogyakarta.
+					href='https://nodejs.org/'
+					color='teal.500'
+					icon={<SiNodeDotJs />}
+				>
+					Node.js
+				</TextLink>{" "}
+				and{" "}
+				<TextLink href='https://reactjs.org/' icon={<SiReact />}>
+					React.js
+				</TextLink>
+				. I'm also an active student in University of AMIKOM Yogyakarta.
 			</Paragraph>
 
 			<Paragraph>
@@ -27,8 +32,10 @@ const AboutMe = () => {
 				temporibus?
 			</Paragraph>
 
-			<Link href='/doc/resume.pdf' target='blank'>
-				<Button colorScheme='blue'>Download My Resume</Button>
+			<Link href='/doc/resume.pdf'>
+				<a target='blank'>
+					<Button colorScheme='blue'>Download My Resume</Button>
+				</a>
 			</Link>
 		</Section>
 	);
