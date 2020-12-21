@@ -16,7 +16,6 @@ const Navbar = () => {
 
 	const listItemProps = {
 		h: "40px",
-		as: "a",
 		d: "grid",
 		placeItems: "center",
 		transition: ".5s",

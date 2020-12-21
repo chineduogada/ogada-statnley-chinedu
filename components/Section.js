@@ -3,7 +3,7 @@ import { Box, Heading } from "@chakra-ui/react";
 const Section = ({ heading, id, children, ...rest }) => {
 	return (
 		<section className='section' id={id}>
-			<Box id={id} {...rest} mb={10}>
+			<Box id={id} {...rest} pt={10}>
 				<Heading
 					as='h3'
 					size='lg'
