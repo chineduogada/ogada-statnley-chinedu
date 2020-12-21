@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, styled } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 import Section from "./Section";
 import Card from "./Card";

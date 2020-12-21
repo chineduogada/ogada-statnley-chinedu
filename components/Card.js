@@ -22,13 +22,18 @@ const Card = ({ github, vercel, npm, heading, description }) => {
 			p={3}
 			m={3}
 			borderRadius='md'
-			shadow='md'
+			shadow='sm'
 			width='250px'
 			height='200px'
 			direction='column'
 			justifyContent='space-between'
 			as='article'
 			textAlign='left'
+			transition='.1s ease-in'
+			_hover={{
+				transform: "scale(1.05)",
+				shadow: "md",
+			}}
 		>
 			<Box as='header'>
 				<Heading as='h4' className='section__heading' fontSize='lg' mb={3}>
