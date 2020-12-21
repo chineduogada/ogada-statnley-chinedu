@@ -8,6 +8,7 @@ import {
 	VStack,
 	Text,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
@@ -22,7 +23,7 @@ const Navbar = () => {
 		_hover: {
 			bg: "gray.100",
 		},
-		onClick: onClose,
+		onClick: () => setTimeout(onClose, 500),
 	};
 
 	return (
@@ -44,18 +45,26 @@ const Navbar = () => {
 				<DrawerOverlay>
 					<DrawerContent d='flex' flexDir='column' justifyContent='center'>
 						<VStack spacing={4} align='stretch'>
-							<Box href='#about-me' {...listItemProps}>
-								<Text align='center'>About me</Text>
-							</Box>
-							<Box href='#projects' {...listItemProps}>
-								<Text align='center'>Projects</Text>
-							</Box>
-							<Box href='#blogs' {...listItemProps}>
-								<Text align='center'>Blogs</Text>
-							</Box>
-							<Box href='#skills' {...listItemProps}>
-								<Text align='center'>Skills</Text>
-							</Box>
+							<Link href='#about-me'>
+								<a>
+									<Text {...listItemProps}>About me</Text>
+								</a>
+							</Link>
+							<Link href='#projects'>
+								<a>
+									<Text {...listItemProps}>Projects</Text>
+								</a>
+							</Link>
+							<Link href='#blogs'>
+								<a>
+									<Text {...listItemProps}>Blogs</Text>
+								</a>
+							</Link>
+							<Link href='#skills'>
+								<a>
+									<Text {...listItemProps}>Skills</Text>
+								</a>
+							</Link>
 						</VStack>
 					</DrawerContent>
 				</DrawerOverlay>
