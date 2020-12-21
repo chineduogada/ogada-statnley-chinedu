@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -12,12 +13,12 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<div className='container'>
+			<Box maxW='650px' m='0 auto' p={3} className='container'>
 				<Navbar />
 				<Header />
 				<Main />
 				<Footer />
-			</div>
+			</Box>
 		</>
 	);
 }
