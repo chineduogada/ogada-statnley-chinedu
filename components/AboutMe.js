@@ -32,7 +32,7 @@ const AboutMe = () => {
 				temporibus?
 			</Paragraph>
 
-			<Link href='/doc/resume.pdf'>
+			<Link href='/doc/web_dev(Stanley_Ogada_Chinedu).pdf'>
 				<a target='blank'>
 					<Button colorScheme='blue'>Download My Resume</Button>
 				</a>
