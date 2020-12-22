@@ -28,37 +28,72 @@ const data = [
 	{
 		title: "Frontend",
 		data: [
-			{ name: "Html5", link: "", icon: <SiHtml5 />, color: "red.500" },
-			{ name: "Css3Alt", link: "", icon: <FaCss3Alt />, color: "blue.500" },
+			{
+				name: "Html5",
+				link:
+					"https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+				icon: <SiHtml5 />,
+				color: "red.500",
+			},
+			{
+				name: "Css3Alt",
+				link: "https://developer.mozilla.org/en-US/docs/Archive/CSS3",
+				icon: <FaCss3Alt />,
+				color: "blue.500",
+			},
 			{
 				name: "Javascript",
-				link: "",
+				link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
 				icon: <SiJavascript />,
-				color: "yellow.400",
+				color: "yellow.300",
 			},
 			{
 				name: "Bootstrap",
-				link: "",
+				link: "https://getbootstrap.com/",
 				icon: <SiBootstrap />,
 				color: "purple.400",
 			},
-			{ name: "Sass", link: "", icon: <SiSass />, color: "pink.600" },
-			{ name: "React", link: "", icon: <FaReact />, color: "blue.500" },
-			{ name: "NextDotJs", link: "", icon: <SiNextDotJs /> },
+			{
+				name: "Sass",
+				link: "https://sass-lang.com/",
+				icon: <SiSass />,
+				color: "pink.600",
+			},
+			{
+				name: "React",
+				link: "https://reactjs.org/",
+				icon: <FaReact />,
+				color: "blue.500",
+			},
+			{
+				name: "NextDotJs",
+				link: "https://nextjs.org/",
+				icon: <SiNextDotJs />,
+			},
 			{
 				name: "MaterialUi",
-				link: "",
+				link: "https://material-ui.com/",
 				icon: <SiMaterialUi />,
 				color: "blue.600",
 			},
 			{
 				name: "StyledComponents",
-				link: "",
+				link: "https://www.styled-components.com/",
 				icon: <SiStyledComponents />,
 				color: "pink.500",
 			},
-			{ name: "ChakraUI", link: "", icon: <CgBolt />, color: "teal.500" },
-			{ name: "Jest", link: "", icon: <SiJest /> },
+			{
+				name: "ChakraUI",
+				link: "https://chakra-ui.com/",
+				icon: <CgBolt />,
+				color: "teal.500",
+			},
+			{
+				name: "Jest",
+				link: "https://jestjs.io/",
+				icon: <SiJest />,
+				color: "green.600",
+			},
 		],
 	},
 	{
@@ -66,16 +101,26 @@ const data = [
 		data: [
 			{
 				name: "NodeDotJs",
-				link: "",
+				link: "https://nodejs.org/",
 				icon: <SiNodeDotJs />,
 				color: "green.500",
 			},
-			{ name: "Mongodb", link: "", icon: <SiMongodb />, color: "green.600" },
-			{ name: "Redis", link: "", icon: <SiRedis />, color: "red.600" },
-			{ name: "Jest", link: "", icon: <SiJest /> },
+			{
+				name: "Mongodb",
+				link: "https://www.mongodb.com/",
+				icon: <SiMongodb />,
+				color: "green.600",
+			},
+			{
+				name: "Redis",
+				link: "https://redis.io/",
+				icon: <SiRedis />,
+				color: "red.600",
+			},
+			{ name: "Jest", link: "https://jestjs.io/", icon: <SiJest /> },
 			{
 				name: "Postman",
-				link: "",
+				link: "https://www.postman.com/",
 				icon: <SiPostman />,
 				color: "orange.500",
 			},
@@ -84,32 +129,50 @@ const data = [
 	{
 		title: "Tools & Services",
 		data: [
-			{ name: "Git", link: "", icon: <DiGit />, color: "red.600" },
+			{
+				name: "Git",
+				link: "https://git-scm.com/",
+				icon: <DiGit />,
+				color: "red.600",
+			},
 			{
 				name: "FillGithub",
-				link: "",
+				link: "https://github.com/",
 				icon: <AiFillGithub />,
 			},
-			{ name: "Travisci", link: "", icon: <SiTravisci />, color: "red" },
-			{ name: "LogoVercel", link: "", icon: <IoLogoVercel />, color: "red" },
+			{
+				name: "Travisci",
+				link: "https://travis-ci.org/",
+				icon: <SiTravisci />,
+				color: "yellow.900",
+			},
+			{
+				name: "LogoVercel",
+				link: "https://vercel.com/",
+				icon: <IoLogoVercel />,
+			},
 			{
 				name: "Amazon Web Services",
-				link: "",
+				link: "https://aws.amazon.com/",
 				icon: <SiAmazonaws />,
 				color: "blue.400",
 			},
-			{ name: "Npm", link: "", icon: <SiNpm />, color: "red.600" },
+			{
+				name: "Npm",
+				link: "https://www.npmjs.com/",
+				icon: <SiNpm />,
+				color: "red.600",
+			},
 			{
 				name: "Visualstudiocode",
-				link: "",
+				link: "https://code.visualstudio.com/",
 				icon: <SiVisualstudiocode />,
 				color: "blue.400",
 			},
 			{
 				name: "FillMediumSquare",
-				link: "",
+				link: "https://medium.com/",
 				icon: <AiFillMediumSquare />,
-				color: "red",
 			},
 		],
 	},
@@ -131,19 +194,21 @@ const Skills = () => {
 
 					<Flex justifyContent='center' wrap='wrap' as='main' p={1}>
 						{data.map(({ name, link, color, icon }, index) => (
-							<Box
-								key={index}
-								width='30px'
-								m={5}
-								transform='scale(2.5)'
-								transition='.3s'
-								_hover={{
-									color,
-									transform: "scale(3)",
-								}}
-							>
-								{icon}
-							</Box>
+							<a href={link} target='link'>
+								<Box
+									key={index}
+									width='30px'
+									m={5}
+									transform='scale(2.5)'
+									transition='.3s'
+									_hover={{
+										color,
+										transform: "scale(3)",
+									}}
+								>
+									{icon}
+								</Box>
+							</a>
 						))}
 					</Flex>
 				</Box>
