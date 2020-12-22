@@ -3,13 +3,13 @@ import {
 	DrawerOverlay,
 	DrawerContent,
 	useDisclosure,
-	Button,
+	IconButton,
 	Box,
 	VStack,
 	Text,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { FaBars } from "react-icons/fa";
+import { CgMenuMotion } from "react-icons/cg";
 
 const Navbar = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -37,9 +37,13 @@ const Navbar = () => {
 			bg='white'
 			zIndex='1'
 		>
-			<Button colorScheme='blue' onClick={onOpen}>
-				<FaBars />
-			</Button>
+			<IconButton
+				colorScheme='blue'
+				onClick={onOpen}
+				isRound
+				icon={<CgMenuMotion />}
+				fontSize='30px'
+			/>
 			<Drawer placement='left' onClose={onClose} isOpen={isOpen}>
 				<DrawerOverlay>
 					<DrawerContent d='flex' flexDir='column' justifyContent='center'>

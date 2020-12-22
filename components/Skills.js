@@ -117,7 +117,12 @@ const data = [
 				icon: <SiRedis />,
 				color: "red.600",
 			},
-			{ name: "Jest", link: "https://jestjs.io/", icon: <SiJest /> },
+			{
+				name: "Jest",
+				link: "https://jestjs.io/",
+				icon: <SiJest />,
+				color: "green.600",
+			},
 			{
 				name: "Postman",
 				link: "https://www.postman.com/",
