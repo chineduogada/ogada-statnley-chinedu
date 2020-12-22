@@ -212,6 +212,7 @@ const Skills = () => {
 									m={5}
 									transform='scale(2.5)'
 									transition='.3s'
+									color='gray.600'
 									_hover={{
 										color,
 										transform: "scale(3)",
