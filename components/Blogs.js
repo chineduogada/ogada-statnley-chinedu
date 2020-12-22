@@ -27,7 +27,7 @@ const Blogs = () => {
 								className='section__heading'
 								fontSize='lg'
 							>
-								{truncate(blog.title, 35)}
+								{truncate(blog.title, 50)}
 							</Heading>
 							<Paragraph>{blog.date}</Paragraph>
 						</header>

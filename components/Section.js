@@ -14,7 +14,9 @@ const Section = ({ heading, id, children, ...rest }) => {
 					{heading}
 				</Heading>
 
-				<Box as='main'>{children}</Box>
+				<Box as='main' p={2}>
+					{children}
+				</Box>
 			</Box>
 		</section>
 	);
