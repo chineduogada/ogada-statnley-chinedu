@@ -8,7 +8,6 @@ import {
 	VStack,
 	Text,
 } from "@chakra-ui/react";
-import Link from "next/link";
 import { CgMenuMotion } from "react-icons/cg";
 
 const Navbar = () => {
@@ -22,7 +21,7 @@ const Navbar = () => {
 		_hover: {
 			bg: "gray.100",
 		},
-		onClick: () => setTimeout(onClose, 500),
+		onClick: () => setTimeout(onClose, 600),
 	};
 
 	return (
@@ -38,7 +37,8 @@ const Navbar = () => {
 			zIndex='1'
 		>
 			<IconButton
-				colorScheme='blue'
+				color='white'
+				bg='brand.800'
 				onClick={onOpen}
 				isRound
 				icon={<CgMenuMotion />}
@@ -48,26 +48,29 @@ const Navbar = () => {
 				<DrawerOverlay>
 					<DrawerContent d='flex' flexDir='column' justifyContent='center'>
 						<VStack spacing={4} align='stretch'>
-							<Link href='#about-me'>
-								<a>
-									<Text {...listItemProps}>About me</Text>
-								</a>
-							</Link>
-							<Link href='#projects'>
-								<a>
-									<Text {...listItemProps}>Projects</Text>
-								</a>
-							</Link>
-							<Link href='#blogs'>
-								<a>
-									<Text {...listItemProps}>Blogs</Text>
-								</a>
-							</Link>
-							<Link href='#skills'>
-								<a>
-									<Text {...listItemProps}>Skills</Text>
-								</a>
-							</Link>
+							<a href='/#about-me'>
+								<Text {...listItemProps}>About me</Text>
+							</a>
+
+							<a href='/#projects'>
+								<Text {...listItemProps}>Projects</Text>
+							</a>
+
+							<a href='/#education'>
+								<Text {...listItemProps}>Education</Text>
+							</a>
+
+							<a href='/#blogs'>
+								<Text {...listItemProps}>Blogs</Text>
+							</a>
+
+							<a href='/#skills'>
+								<Text {...listItemProps}>Skills</Text>
+							</a>
+
+							<a href='/#contact'>
+								<Text {...listItemProps}>Contact</Text>
+							</a>
 						</VStack>
 					</DrawerContent>
 				</DrawerOverlay>

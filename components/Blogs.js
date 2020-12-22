@@ -19,8 +19,15 @@ const Blogs = () => {
 	return (
 		<Section heading='Blogs' id='blogs'>
 			<Box>
-				{blogs.map((blog) => (
-					<Box as='article' p={2} mb={3} shadow='xs' rounded='md'>
+				{blogs.map((blog, index) => (
+					<Box
+						key={index}
+						as='article'
+						p={2}
+						mb={3}
+						shadow='xs'
+						rounded='md'
+					>
 						<header>
 							<Heading
 								as='h4'

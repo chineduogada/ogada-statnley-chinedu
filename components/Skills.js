@@ -1,5 +1,4 @@
-import Section from "./Section";
-import { FaNode, FaReact, FaCss3Alt } from "react-icons/fa";
+import { FaReact, FaCss3Alt } from "react-icons/fa";
 import {
 	SiNodeDotJs,
 	SiHtml5,
@@ -23,6 +22,8 @@ import { DiGit } from "react-icons/di";
 import { CgBolt } from "react-icons/cg";
 import { IoLogoVercel } from "react-icons/io5";
 import { Box, Flex, Heading } from "@chakra-ui/react";
+import Section from "./Section";
+import Paragraph from "./Paragraph";
 
 const data = [
 	{
@@ -186,8 +187,14 @@ const data = [
 const Skills = () => {
 	return (
 		<Section heading='Skills' id='skills'>
-			{data.map(({ title, data }) => (
-				<Box as='article'>
+			<Paragraph>
+				I’ve spent about two years on improving my skills in website
+				development using PHP and Javascript that I’m now pretty confident
+				in building apps using these tools:
+			</Paragraph>
+
+			{data.map(({ title, data }, idx) => (
+				<Box as='article' key={idx}>
 					<Heading
 						as='h4'
 						className='section__heading'
@@ -199,9 +206,8 @@ const Skills = () => {
 
 					<Flex justifyContent='center' wrap='wrap' as='main' p={1}>
 						{data.map(({ name, link, color, icon }, index) => (
-							<a href={link} target='link'>
+							<a href={link} target='link' key={index}>
 								<Box
-									key={index}
 									width='30px'
 									m={5}
 									transform='scale(2.5)'

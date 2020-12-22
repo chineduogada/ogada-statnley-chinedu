@@ -10,6 +10,7 @@ const Header = () => {
 			justifyContent='center'
 			wrap='wrap'
 			mb={10}
+			id='header'
 		>
 			<Box
 				mr='3'
@@ -24,6 +25,7 @@ const Header = () => {
 					width={200}
 					src='/img/me.jpg'
 					alt='me'
+					quality='100'
 				/>
 			</Box>
 
