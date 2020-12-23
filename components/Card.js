@@ -29,7 +29,7 @@ const Card = ({ github, vercel, npm, heading, description }) => {
 			justifyContent='space-between'
 			as='article'
 			textAlign='left'
-			transition='.1s ease-in'
+			transition='.05s ease-in'
 			_hover={{
 				transform: "scale(1.05)",
 				shadow: "md",
