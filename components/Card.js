@@ -23,13 +23,13 @@ const Card = ({ github, vercel, npm, heading, description }) => {
 			m={3}
 			borderRadius='md'
 			shadow='sm'
-			width='250px'
+			width={{ base: "100%", sm: "225px", md: "250px" }}
 			height='200px'
 			direction='column'
 			justifyContent='space-between'
 			as='article'
 			textAlign='left'
-			transition='.1s ease-in'
+			transition='.05s ease-in'
 			_hover={{
 				transform: "scale(1.05)",
 				shadow: "md",

@@ -1,20 +1,52 @@
+import { Box, Heading } from "@chakra-ui/react";
+import { FaBookOpen } from "react-icons/fa";
+import truncate from "../utils/truncate";
+import Paragraph from "./Paragraph";
 import Section from "./Section";
+import ButtonLink from "./ButtonLink";
+
+const blogs = [
+	{
+		title: "Learning JavaScript efficiently hedf dsfd fdf df df df df df",
+		date: "november 10, 2020",
+	},
+	{ title: "Learning JavaScript efficiently", date: "november 10, 2020" },
+	{ title: "Learning JavaScript efficiently", date: "november 10, 2020" },
+	{ title: "Learning JavaScript efficiently", date: "november 10, 2020" },
+];
 
 const Blogs = () => {
 	return (
 		<Section heading='Blogs' id='blogs'>
-			Blogs Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-			Reiciendis consectetur minima ducimus nisi voluptates obcaecati iste,
-			alias a mollitia inventore ipsa quasi architecto, quam officia autem
-			iure magnam quisquam! Aperiam, minus quibusdam. Corrupti, rem? Harum
-			veniam quas quod ea blanditiis laudantium deserunt nesciunt at eius
-			quis culpa beatae eveniet praesentium repellat laboriosam, deleniti
-			asperiores incidunt ipsum. Dolore natus eveniet similique fugit
-			deleniti, aspernatur laboriosam fugiat quos veritatis rem qui
-			consequatur provident neque facere, repellendus ipsum in corrupti
-			praesentium! Placeat mollitia exercitationem unde tenetur modi ipsa
-			ipsum? Eveniet nisi quas neque nihil laborum, ducimus eaque, doloremque
-			facere deleniti temporibus minus voluptate.
+			<Box>
+				{blogs.map((blog, index) => (
+					<Box
+						key={index}
+						as='article'
+						p={2}
+						mb={3}
+						shadow='xs'
+						rounded='md'
+					>
+						<header>
+							<Heading
+								as='h4'
+								className='section__heading'
+								fontSize='lg'
+							>
+								{truncate(blog.title, 50)}
+							</Heading>
+							<Paragraph>{blog.date}</Paragraph>
+						</header>
+
+						<Box as='footer' textAlign='right'>
+							<ButtonLink href='/' variant='ghost' icon={<FaBookOpen />}>
+								read
+							</ButtonLink>
+						</Box>
+					</Box>
+				))}
+			</Box>
 		</Section>
 	);
 };
