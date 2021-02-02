@@ -72,7 +72,7 @@ const AboutMe = () => {
         looking forward to working with a good team.
       </Paragraph>
 
-      <Link href="/doc/web_dev(Stanley_Ogada_Chinedu).pdf">
+      <Link href="/doc/OGADA_STANLEY_CHINEDU(web-developer).pdf">
         <a target="blank">
           <Button colorScheme="blue">Download My Resume</Button>
         </a>
