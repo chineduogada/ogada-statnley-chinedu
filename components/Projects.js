@@ -14,7 +14,6 @@ const projects = [
   },
   {
     github: "https://github.com/chineduogada/my-portfolio",
-    vercel: "https://my-portfolio-git-ft-sections-2.chineduogada.vercel.app/",
     heading: "My Portfolio",
     description: "My Curriculum vitae",
   },
