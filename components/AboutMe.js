@@ -54,10 +54,7 @@ const AboutMe = () => {
         /{" "}
         <TextLink href="https://nodejs.org/" color="teal.500">
           Express
-        </TextLink>{" "}
-        ,{" "}
-
-        ,etc.
+        </TextLink>,etc.
       </Paragraph>
 
       <Paragraph>
