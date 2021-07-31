@@ -122,12 +122,7 @@ const data = [
         icon: <SiJest />,
         color: "green.600",
       },
-      {
-        name: "Puppeteer",
-        link: "https://pptr.dev/",
-        icon: <GiPuppet />,
-        color: "green.600",
-      },
+
       {
         name: "Postman",
         link: "https://www.postman.com/",
@@ -181,7 +176,7 @@ const Skills = () => {
     <Section heading="Skills" id="skills">
       <Paragraph>
         I’ve spent about two years on improving my skills in website development
-        using PHP and Javascript that I’m now pretty confident in building apps
+        using Javascript that I’m now pretty confident in building apps
         using these tools:
       </Paragraph>
 
