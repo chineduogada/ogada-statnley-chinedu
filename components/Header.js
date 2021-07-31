@@ -44,7 +44,7 @@ const Header = () => {
         ,
         <br />a{" "}
         <Box className="heading__bold" as="span" color="brand.700">
-          Fullstack Web Developer
+          Frontend Web Developer
         </Box>
       </Heading>
     </Flex>
