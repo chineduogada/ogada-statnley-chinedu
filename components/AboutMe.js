@@ -16,7 +16,7 @@ const AboutMe = () => {
   return (
     <Section heading="About Me" id="about-me">
       <Paragraph>
-        I’m currently working as a freelance fullstack developer. I specialize
+        I’m currently working as a freelance React Developer. I specialize
         in front end development. I am Experienced with all stages of the
         development cycle for dynamic web projects. Well-versed in numerous
         technologies including:
@@ -56,13 +56,7 @@ const AboutMe = () => {
           Express
         </TextLink>{" "}
         ,{" "}
-        <TextLink
-          href="https://nodejs.org/"
-          icon={<SiMongodb />}
-          color="green.600"
-        >
-          MongoDB
-        </TextLink>{" "}
+
         ,etc.
       </Paragraph>
 
